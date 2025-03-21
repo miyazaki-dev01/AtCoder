@@ -1,0 +1,120 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "abc_dl",
+      "type": "shell",
+      "command": "${workspaceFolder}/cmd/abc_dl.sh ${input:abc_dl}",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "test cpp",
+      "type": "shell",
+      "command": "oj t -d ${fileDirname}/tests/ -c ${fileDirname}/${fileBasenameNoExtension}.out -N",
+      "dependsOn": ["compile"],
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "test py",
+      "type": "shell",
+      "command": "oj t -d ${fileDirname}/tests/ -c 'python3 ${file}' -N",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "submit",
+      "type": "shell",
+      "command": "cd ${fileDirname} && acc submit ${file}",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "execute cpp",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension}.out",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      },
+      "dependsOn": ["compile"]
+    },
+    {
+      "label": "execute py",
+      "type": "shell",
+      "command": "python3 ${file}",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "execute cpp input.txt",
+      "type": "shell",
+      "command": "${fileDirname}/${fileBasenameNoExtension}.out < ${workspaceFolder}/templates/input.txt",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      },
+      "dependsOn": ["compile"]
+    },
+    {
+      "label": "execute py input.txt",
+      "type": "shell",
+      "command": "python3 ${file} < ${workspaceFolder}/templates/input.txt",
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "compile",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=gnu++17",
+        "-Wall",
+        "-Wextra",
+        "-O2",
+        "-I/lib/ac-library",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.out"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "abc_dl",
+      "description": "ダウンロードするabcのコンテスト名を入力してください (例: abc123)",
+      "type": "promptString"
+    }
+  ]
+}
