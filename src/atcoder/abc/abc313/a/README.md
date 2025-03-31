@@ -2,7 +2,7 @@
 https://atcoder.jp/contests/abc313/tasks/abc313_a
 
 ## タグ
-max, 
+max
 
 ## 解法
 1. 人1が最強になる条件は、「始めの要素(P1)」>「始めの要素以外のmax(M)」となること。したがって、答えは M + 1 - P1 となる。
@@ -19,7 +19,10 @@ int main() {
   cin >> n;
   vector<int> a(n);
   rep(i,n) cin >> a[i];
-  int mx = *max_element(a.begin()+1, a.end());
+  int mx = 0;
+  for (int i = 1; i < n; i++) {
+    mx = max(mx, a[i]);
+  }
   int ans = max(0, (mx+1) - a[0]);
   cout << ans << endl;
   return 0;
