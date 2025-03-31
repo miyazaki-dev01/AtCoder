@@ -21,13 +21,14 @@ CONTEST_DIR="${WORKDIR}/src/atcoder/abc"
 PROBLEM_DIR="${CONTEST_DIR}/$1"
 CPP_TEMPLATE="${WORKDIR}/templates/atcoder.cpp"
 PYTHON_TEMPLATE="${WORKDIR}/templates/atcoder.py"
+README_TEMPLATE="${WORKDIR}/templates/README.md"
 
 # 該当コンテスト(例：abc123)のフォルダを作成し，テストデータをダウンロードする
 mkdir -p $CONTEST_DIR
 cd $CONTEST_DIR
 acc new $1
 
-# ダウンロードしたテストデータに対して，cpp,pyファイルを作成する
+# ダウンロードしたテストデータに対して，cpp,py,READMEファイルを作成する
 PROBLEMS="${PROBLEM_DIR}/*"
 for DIRPATH in $PROBLEMS; do
     if [ ! -d $DIRPATH ]; then
@@ -36,4 +37,5 @@ for DIRPATH in $PROBLEMS; do
 
     cp -n $CPP_TEMPLATE "${DIRPATH}/$1_${DIRPATH##*/}.cpp"
     cp -n $PYTHON_TEMPLATE "${DIRPATH}/$1_${DIRPATH##*/}.py"
+    cp -n $README_TEMPLATE "${DIRPATH}/README.md"
 done
