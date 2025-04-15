@@ -1,6 +1,10 @@
 ## 問題url
 https://atcoder.jp/contests/abc313/tasks/abc313_b
 
+## 解説url
+解説： https://atcoder.jp/contests/abc313/editorial/6906\
+動画：https://www.youtube.com/live/VluAlzOH83I?t=1700&si=SsfAV1n9v--gk64q
+
 ## ステータス
 ❌
 
