@@ -10,6 +10,24 @@ using vvi = vector<vi>;
 using P = pair<int, int>;
 
 int main() {
-  
+  string s;
+  cin >> s;
+
+  vector<char> c = {'a', 'i', 'u', 'e', 'o'};
+
+  string ans;
+  rep(i,s.size()) {
+    bool flg = false;
+    rep(j,c.size()) {
+      if(s[i] == c[j]) {
+        flg = true;
+      }
+    }
+    if(!flg) {
+      ans += s[i];
+    }
+  }
+
+  cout << ans << endl;
   return 0;
 }
