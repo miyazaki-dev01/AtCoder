@@ -2,7 +2,7 @@
 https://atcoder.jp/contests/abc315/tasks/abc315_a
 
 ## 解説url
-解説：https://atcoder.jp/contests/abc315/editorial/6987\
+解説：https://atcoder.jp/contests/abc315/editorial/6987 \
 動画：https://www.youtube.com/watch?v=fDJpXN2R75A&t=237s
 
 ## ステータス
