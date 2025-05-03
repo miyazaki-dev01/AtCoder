@@ -2,7 +2,7 @@
 https://atcoder.jp/contests/abc313/tasks/abc313_c
 
 ## 解説url
-解説：https://atcoder.jp/contests/abc313/editorial/6901\
+解説：https://atcoder.jp/contests/abc313/editorial/6901 \
 動画：https://www.youtube.com/live/VluAlzOH83I?t=3006&si=7UQhCqkyKFe9wQPs
 
 ## ステータス

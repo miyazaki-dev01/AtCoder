@@ -7,8 +7,8 @@
 
 ## 使用ライブラリ
 
-- [online-judge-tools](https://github.com/online-judge-tools/oj)：AtCoder や他のオンラインジャッジの問題を扱うためのツール\
-- [atcoder-cli](https://github.com/Tatamo/atcoder-cli?tab=readme-ov-file)：AtCoder のコンテスト参加を便利にする CLI ツール\
+- [online-judge-tools](https://github.com/online-judge-tools/oj)：AtCoder や他のオンラインジャッジの問題を扱うためのツール
+- [atcoder-cli](https://github.com/Tatamo/atcoder-cli?tab=readme-ov-file)：AtCoder のコンテスト参加を便利にする CLI ツール
 - [ac-library](https://github.com/atcoder/ac-library)：AtCoder 公式の C++ ライブラリ
 
 ## 環境構築
@@ -49,6 +49,8 @@ VSCode で `ctrl + shift + P` でコマンドパレットを開き、`Dev Contai
    > `abc123/` -> A, B, C, ...問題のディレクトリ\
    > `abc123/a/test/` -> A 問題のテストケース\
    > `abc123/a/abc123_a.cpp` -> A 問題の解答ファイル（`/templates/atcoder.cpp` をコピーして作られる）
+   > `abc123/a/abc123_a.py` -> A 問題の解答ファイル（`/templates/atcoder.py` をコピーして作られる）
+   > `abc123/a/README.md` -> 問題の解答・解説などの記録（`/templates/README.md` をコピーして作られる）
 
 ### 実装
 
@@ -93,10 +95,16 @@ VSCode で `ctrl + shift + P` でコマンドパレットを開き、`Dev Contai
   │       └── abc
   │           ├── abc001
   │           └── abc002
+  │               └── a
+  │                   ├── test
+  │                   ├── abc002_a.cpp
+  │                   ├── abc002_a.py
+  │                   └── README.md
   ├── templates
   │   ├── atcoder.cpp
   │   ├── atcoder.py
-  │   └── input.txt
+  │   ├── input.txt
+  │   └── README.md
   ├── docker-compose.yml
   └── Dockerfile
 ```
