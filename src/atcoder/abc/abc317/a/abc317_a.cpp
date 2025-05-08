@@ -10,6 +10,16 @@ using vvi = vector<vi>;
 using P = pair<int, int>;
 
 int main() {
-  
+  int n, h, x;
+  cin >> n >> h >> x;
+  vi p(n);
+  rep(i,n) cin >> p[i];
+
+  rep(i,n) {
+    if(h+p[i] >= x) {
+      cout << i+1 << endl;
+      return 0;
+    }
+  }
   return 0;
 }
