@@ -10,6 +10,16 @@ using vvi = vector<vi>;
 using P = pair<int, int>;
 
 int main() {
+  int n, m, p;
+  cin >> n >> m >> p;
+
+  n -= m;
+  int ans = 0;
+  while (n >= 0) {
+    n -= p;
+    ans++;
+  }
   
+  cout << ans << endl;
   return 0;
 }
